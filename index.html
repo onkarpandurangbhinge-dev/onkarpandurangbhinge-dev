@@ -5,91 +5,301 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Travel Explorer</title>
 
-<link rel="stylesheet" href="style.css">
+<style>
+
+body{
+font-family: Arial, sans-serif;
+margin:0;
+background:#f4f4f4;
+}
+
+header{
+background:#0a6cff;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+.navbar{
+display:flex;
+justify-content:space-around;
+background:#222;
+padding:15px;
+}
+
+.navbar div{
+color:white;
+text-align:center;
+cursor:pointer;
+}
+
+.navbar img{
+width:40px;
+height:40px;
+display:block;
+margin:auto;
+}
+
+.section{
+display:none;
+padding:20px;
+}
+
+.cards{
+display:flex;
+flex-wrap:wrap;
+gap:20px;
+}
+
+.card{
+background:white;
+border-radius:10px;
+overflow:hidden;
+width:300px;
+box-shadow:0 0 10px rgba(0,0,0,0.2);
+}
+
+.card img{
+width:100%;
+height:200px;
+object-fit:cover;
+}
+
+.card h3{
+padding:10px;
+margin:0;
+}
+
+.card p{
+padding:10px;
+}
+
+footer{
+background:#222;
+color:white;
+text-align:center;
+padding:15px;
+margin-top:20px;
+}
+
+</style>
+
+<script>
+
+function openSection(id){
+
+let sections=document.querySelectorAll(".section");
+
+sections.forEach(sec=>{
+sec.style.display="none";
+});
+
+document.getElementById(id).style.display="block";
+
+}
+
+</script>
 
 </head>
+
 <body>
 
 <header>
-
 <h1>🌍 Travel Explorer</h1>
-
-<nav>
-<a href="#">Home</a>
-<a href="#">Destinations</a>
-<a href="#">Packages</a>
-<a href="#">Gallery</a>
-<a href="#">Contact</a>
-<a href="#">About</a>
-</nav>
-
+<p>Discover Amazing Places Around the World</p>
 </header>
 
 
-<section class="search">
+<!-- Navigation Icons -->
 
-<h2>Find Your Dream Destination ✈️</h2>
+<div class="navbar">
 
-<input type="text" id="searchBox" placeholder="Search destination...">
+<div onclick="openSection('beach')">
+<img src="https://cdn-icons-png.flaticon.com/512/869/869869.png">
+Beach
+</div>
 
-</section>
+<div onclick="openSection('mountain')">
+<img src="https://cdn-icons-png.flaticon.com/512/684/684908.png">
+Mountains
+</div>
+
+<div onclick="openSection('city')">
+<img src="https://cdn-icons-png.flaticon.com/512/854/854878.png">
+Cities
+</div>
+
+<div onclick="openSection('temple')">
+<img src="https://cdn-icons-png.flaticon.com/512/235/235861.png">
+Temples
+</div>
+
+<div onclick="openSection('adventure')">
+<img src="https://cdn-icons-png.flaticon.com/512/201/201623.png">
+Adventure
+</div>
+
+<div onclick="openSection('food')">
+<img src="https://cdn-icons-png.flaticon.com/512/1046/1046784.png">
+Food
+</div>
+
+</div>
 
 
-<section class="destinations" id="destinationList">
+<!-- Beach Section -->
+
+<div id="beach" class="section">
+
+<h2>🏝 Beach Destinations</h2>
+
+<div class="cards">
 
 <div class="card">
-<img src="images/paris.jpg">
-<h3>Paris, France</h3>
-<p>⭐ 4.8 | Romantic city with Eiffel Tower.</p>
-<button onclick="book()">Book Now</button>
+<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
+<h3>Goa</h3>
+<p>Famous beach destination in India.</p>
 </div>
 
 <div class="card">
-<img src="images/goa.jpg">
-<h3>Goa, India</h3>
-<p>⭐ 4.6 | Famous for beaches and nightlife.</p>
-<button onclick="book()">Book Now</button>
+<img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21">
+<h3>Maldives</h3>
+<p>Beautiful islands and luxury resorts.</p>
+</div>
+
+</div>
+
+</div>
+
+
+<!-- Mountains -->
+
+<div id="mountain" class="section">
+
+<h2>⛰ Mountain Destinations</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+<h3>Manali</h3>
+<p>Snow mountains in Himachal Pradesh.</p>
 </div>
 
 <div class="card">
-<img src="images/dubai.jpg">
-<h3>Dubai, UAE</h3>
-<p>⭐ 4.7 | Luxury shopping and desert safari.</p>
-<button onclick="book()">Book Now</button>
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+<h3>Leh Ladakh</h3>
+<p>Adventure and beautiful landscapes.</p>
+</div>
+
+</div>
+
+</div>
+
+
+<!-- Cities -->
+
+<div id="city" class="section">
+
+<h2>🏙 Popular Cities</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da">
+<h3>Mumbai</h3>
+<p>Gateway of India and Marine Drive.</p>
 </div>
 
 <div class="card">
-<img src="images/bali.jpg">
-<h3>Bali, Indonesia</h3>
-<p>⭐ 4.9 | Beautiful islands and temples.</p>
-<button onclick="book()">Book Now</button>
+<img src="https://images.unsplash.com/photo-1587474260584-136574528ed5">
+<h3>Delhi</h3>
+<p>Capital city with historical monuments.</p>
+</div>
+
+</div>
+
+</div>
+
+
+<!-- Temples -->
+
+<div id="temple" class="section">
+
+<h2>🛕 Famous Temples</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Tirupati_balaji_temple.jpg">
+<h3>Tirupati</h3>
+<p>One of the richest temples in the world.</p>
 </div>
 
 <div class="card">
-<img src="images/london.jpg">
-<h3>London, UK</h3>
-<p>⭐ 4.5 | Historic landmarks and museums.</p>
-<button onclick="book()">Book Now</button>
+<img src="https://upload.wikimedia.org/wikipedia/commons/4/4d/Somnath_temple.jpg">
+<h3>Somnath</h3>
+<p>Historic temple located in Gujarat.</p>
+</div>
+
+</div>
+
+</div>
+
+
+<!-- Adventure -->
+
+<div id="adventure" class="section">
+
+<h2>🏕 Adventure Places</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1500534314209-a26db0f5b64d">
+<h3>Rishikesh</h3>
+<p>River rafting and camping destination.</p>
 </div>
 
 <div class="card">
-<img src="images/newyork.jpg">
-<h3>New York, USA</h3>
-<p>⭐ 4.7 | Explore Times Square and skyline.</p>
-<button onclick="book()">Book Now</button>
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+<h3>Spiti Valley</h3>
+<p>Perfect place for biking adventure.</p>
 </div>
 
-</section>
+</div>
+
+</div>
+
+
+<!-- Food -->
+
+<div id="food" class="section">
+
+<h2>🍜 Food Tourism</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1604908176997-4311e7c83c0d">
+<h3>Hyderabad</h3>
+<p>Famous for Hyderabadi Biryani.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1544025162-d76694265947">
+<h3>Amritsar</h3>
+<p>Street food and Punjabi cuisine.</p>
+</div>
+
+</div>
+
+</div>
 
 
 <footer>
-
-<p>© 2026 Travel Explorer</p>
-<p>Plan • Travel • Explore 🌎</p>
-
+<p>Travel Explorer © 2026</p>
 </footer>
-
-<script src="script.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Travel Explorer</title>
+
+<style>
+
+body{
+font-family: Arial;
+margin:0;
+background:#f4f4f4;
+}
+
+header{
+background:#0077ff;
+color:white;
+text-align:center;
+padding:25px;
+}
+
+.navbar{
+display:flex;
+justify-content:space-around;
+background:#222;
+padding:15px;
+flex-wrap:wrap;
+}
+
+.navbar div{
+color:white;
+cursor:pointer;
+font-weight:bold;
+}
+
+.section{
+display:none;
+padding:30px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:white;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 0 10px rgba(0,0,0,0.2);
+}
+
+.card img{
+width:100%;
+height:180px;
+object-fit:cover;
+}
+
+.card h3{
+margin:10px;
+}
+
+.card p{
+margin:10px;
+}
+
+.contact{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.2);
+max-width:500px;
+margin:auto;
+}
+
+input,textarea{
+width:100%;
+padding:10px;
+margin:10px 0;
+}
+
+button{
+background:#0077ff;
+color:white;
+border:none;
+padding:10px 20px;
+cursor:pointer;
+}
+
+footer{
+background:#222;
+color:white;
+text-align:center;
+padding:15px;
+margin-top:20px;
+}
+
+</style>
+
+<script>
+
+function openSection(id){
+
+let sections=document.querySelectorAll(".section");
+
+sections.forEach(sec=>{
+sec.style.display="none";
+});
+
+document.getElementById(id).style.display="block";
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>🌍 Travel Explorer</h1>
+<p>Discover Amazing Places Around the World</p>
+
+</header>
+
+<!-- Navigation -->
+
+<div class="navbar">
+
+<div onclick="openSection('beaches')">🏝 Beaches</div>
+<div onclick="openSection('mountains')">⛰ Mountains</div>
+<div onclick="openSection('cities')">🏙 Cities</div>
+<div onclick="openSection('temples')">🛕 Temples</div>
+<div onclick="openSection('adventure')">🚵 Adventure</div>
+<div onclick="openSection('location')">📍 Location</div>
+<div onclick="openSection('contact')">📞 Contact</div>
+
+</div>
+
+<!-- BEACHES -->
+
+<div id="beaches" class="section">
+
+<h2>🏝 Famous Beaches</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="https://source.unsplash.com/400x300/?goa,beach">
+<h3>Goa</h3>
+<p>India's most popular beach destination.</p>
+</div>
+
+<div class="card">
+<img src="https://source.unsplash.com/400x300/?maldives,beach">
+<h3>Maldives</h3>
+<p>Luxury island beaches.</p>
+</div>
+
+<div class="card">
+<img src="https://source.unsplash.com/400x300/?bali,beach">
+<h3>Bali</h3>
+<p>Beautiful beaches in Indonesia.</p>
+</div>
+
+<div class="card">
+<img src="https://source.unsplash.com/400x300/?phuket,beach">
+<h3>Phuket</h3>
+<p>Thailand famous beach island.</p>
+</div>
+
+<div class="card">
+<img src="https://source.unsplash.com/400x300/?hawaii,beach">
+<h3>Hawaii</h3>
+<p>USA tropical paradise.</p>
+</div>
+
+</div>
+
+</div>
+
+<!-- MOUNTAINS -->
+
+<div id="mountains" class="section">
+
+<h2>⛰ Mountain Destinations</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="https://source.unsplash.com/400x300/?manali,mountain">
+<h3>Manali</h3>
+<p>Snow mountains in Himachal Pradesh.</p>
+</div>
+
+<div class="card">
+<img src="https://source.unsplash.com/400x300/?ladakh,mountain">
+<h3>Ladakh</h3>
+<p>Adventure mountain destination.</p>
+</div>
+
+<div class="card">
+<img src="https://source.unsplash.com/400x300/?swiss,alps">
+<h3>Swiss Alps</h3>
+<p>Beautiful European mountains.</p>
+</div>
+
+<div class="card">
+<img src="https://source.unsplash.com/400x300/?everest">
+<h3>Mount Everest</h3>
+<p>World's highest mountain.</p>
+</div>
+
+<div class="card">
+<img src="https://source.unsplash.com/400x300/?rocky,mountains">
+<h3>Rocky Mountains</h3>
+<p>Famous North American mountains.</p>
+</div>
+
+</div>
+
+</div>
+
+<!-- CITIES -->
+
+<div id="cities" class="section">
+
+<h2>🏙 Popular Cities</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="https://source.unsplash.com/400x300/?mumbai">
+<h3>Mumbai</h3>
+<p>Financial capital of India.</p>
+</div>
+
+<div class="card">
+<img src="https://source.unsplash.com/400x300/?paris">
+<h3>Paris</h3>
+<p>City of lights.</p>
+</div>
+
+<div class="card">
+<img src="https://source.unsplash.com/400x300/?dubai">
+<h3>Dubai</h3>
+<p>Luxury travel destination.</p>
+</div>
+
+<div class="card">
+<img src="https://source.unsplash.com/400x300/?newyork">
+<h3>New York</h3>
+<p>The city that never sleeps.</p>
+</div>
+
+<div class="card">
+<img src="https://source.unsplash.com/400x300/?tokyo">
+<h3>Tokyo</h3>
+<p>Modern Japanese city.</p>
+</div>
+
+</div>
+
+</div>
+
+<!-- TEMPLES -->
+
+<div id="temples" class="section">
+
+<h2>🛕 Famous Temples</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="https://source.unsplash.com/400x300/?tirupati,temple">
+<h3>Tirupati</h3>
+<p>World famous temple in India.</p>
+</div>
+
+<div class="card">
+<img src="https://source.unsplash.com/400x300/?golden,temple">
+<h3>Golden Temple</h3>
+<p>Amritsar Sikh temple.</p>
+</div>
+
+<div class="card">
+<img src="https://source.unsplash.com/400x300/?kedarnath">
+<h3>Kedarnath</h3>
+<p>Himalayan Shiva temple.</p>
+</div>
+
+<div class="card">
+<img src="https://source.unsplash.com/400x300/?somnath,temple">
+<h3>Somnath</h3>
+<p>Historic temple in Gujarat.</p>
+</div>
+
+<div class="card">
+<img src="https://source.unsplash.com/400x300/?mecca,mosque">
+<h3>Mecca</h3>
+<p>Holy Islamic pilgrimage city.</p>
+</div>
+
+</div>
+
+</div>
+
+<!-- ADVENTURE -->
+
+<div id="adventure" class="section">
+
+<h2>🚵 Adventure Tourism</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="https://source.unsplash.com/400x300/?rishikesh,rafting">
+<h3>Rishikesh</h3>
+<p>River rafting adventure.</p>
+</div>
+
+<div class="card">
+<img src="https://source.unsplash.com/400x300/?skydiving">
+<h3>Dubai Skydiving</h3>
+<p>Extreme adventure sport.</p>
+</div>
+
+<div class="card">
+<img src="https://source.unsplash.com/400x300/?trekking">
+<h3>Nepal Trekking</h3>
+<p>Mountain trekking experience.</p>
+</div>
+
+<div class="card">
+<img src="https://source.unsplash.com/400x300/?scuba,diving">
+<h3>Scuba Diving</h3>
+<p>Underwater adventure.</p>
+</div>
+
+<div class="card">
+<img src="https://source.unsplash.com/400x300/?bungee,jumping">
+<h3>Bungee Jumping</h3>
+<p>Extreme sports tourism.</p>
+</div>
+
+</div>
+
+</div>
+
+<!-- LOCATION -->
+
+<div id="location" class="section">
+
+<h2>📍 Our Location</h2>
+
+<p>Travel Explorer Office</p>
+<p>Pune, Maharashtra, India</p>
+
+<iframe
+width="100%"
+height="350"
+src="https://maps.google.com/maps?q=pune&t=&z=13&ie=UTF8&iwloc=&output=embed">
+</iframe>
+
+</div>
+
+<!-- CONTACT -->
+
+<div id="contact" class="section">
+
+<h2>📞 Contact Us</h2>
+
+<div class="contact">
+
+<input type="text" placeholder="Your Name">
+
+<input type="email" placeholder="Your Email">
+
+<textarea placeholder="Your Message"></textarea>
+
+<button>Send Message</button>
+
+</div>
+
+</div>
+
+<footer>
+
+<p>Travel Explorer © 2026</p>
+
+</footer>
+
+</body>
+</html>

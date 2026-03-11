@@ -1,115 +1,271 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Travel Explore</title>
-<link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Travel Explorer</title>
+
+<style>
+
+body{
+font-family: Arial;
+margin:0;
+background:#f4f4f4;
+}
+
+header{
+background:#0077ff;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+.navbar{
+display:flex;
+justify-content:space-around;
+background:#222;
+padding:10px;
+flex-wrap:wrap;
+}
+
+.navbar div{
+color:white;
+text-align:center;
+cursor:pointer;
+padding:10px;
+}
+
+.navbar img{
+width:35px;
+height:35px;
+display:block;
+margin:auto;
+}
+
+.section{
+display:none;
+padding:20px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.card{
+background:white;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 0 10px rgba(0,0,0,0.2);
+}
+
+.card img{
+width:100%;
+height:160px;
+object-fit:cover;
+}
+
+.card h3{
+margin:10px;
+}
+
+.card p{
+margin:10px;
+font-size:14px;
+}
+
+</style>
+
+<script>
+
+function openSection(id){
+
+let sections=document.querySelectorAll(".section");
+
+sections.forEach(sec=>{
+sec.style.display="none";
+});
+
+document.getElementById(id).style.display="block";
+
+}
+
+</script>
+
 </head>
 
 <body>
 
-<h1>🌍 Travel Explore</h1>
-<p>Discover Beautiful Places Around The World</p>
+<header>
+<h1>🌍 Travel Explorer</h1>
+<p>Find Amazing Destinations Around the World</p>
+</header>
 
-<div class="container">
+<div class="navbar">
+
+<div onclick="openSection('beach')">
+<img src="https://cdn-icons-png.flaticon.com/512/869/869869.png">
+Beach
+</div>
+
+<div onclick="openSection('mountain')">
+<img src="https://cdn-icons-png.flaticon.com/512/684/684908.png">
+Mountains
+</div>
+
+<div onclick="openSection('city')">
+<img src="https://cdn-icons-png.flaticon.com/512/854/854878.png">
+Cities
+</div>
+
+<div onclick="openSection('temple')">
+<img src="https://cdn-icons-png.flaticon.com/512/235/235861.png">
+Temples
+</div>
+
+<div onclick="openSection('adventure')">
+<img src="https://cdn-icons-png.flaticon.com/512/201/201623.png">
+Adventure
+</div>
+
+<div onclick="openSection('food')">
+<img src="https://cdn-icons-png.flaticon.com/512/1046/1046784.png">
+Food
+</div>
+
+</div>
+
+
+<!-- BEACH SECTION -->
+
+<div id="beach" class="section">
+
+<h2>🏝 Beach Destinations</h2>
+
+<div class="cards">
 
 <div class="card">
-<img src="images/beach.jpg">
-<h3>Beach</h3>
+<img src="https://source.unsplash.com/400x300/?goa,beach">
+<h3>Goa</h3>
+<p>Popular beach destination in India.</p>
 </div>
 
 <div class="card">
-<img src="images/mountain.jpg">
-<h3>Mountains</h3>
+<img src="https://source.unsplash.com/400x300/?maldives,beach">
+<h3>Maldives</h3>
+<p>Luxury island beaches.</p>
 </div>
 
 <div class="card">
-<img src="images/city.jpg">
-<h3>Cities</h3>
+<img src="https://source.unsplash.com/400x300/?bali,beach">
+<h3>Bali</h3>
+<p>Famous Indonesian beaches.</p>
 </div>
 
 <div class="card">
-<img src="images/temple.jpg">
-<h3>Temples</h3>
+<img src="https://source.unsplash.com/400x300/?hawaii,beach">
+<h3>Hawaii</h3>
+<p>Tropical paradise.</p>
 </div>
 
 <div class="card">
-<img src="images/adventure.jpg">
-<h3>Adventure</h3>
+<img src="https://source.unsplash.com/400x300/?phuket,beach">
+<h3>Phuket</h3>
+<p>Thailand beach tourism.</p>
 </div>
 
 <div class="card">
-<img src="images/food.jpg">
-<h3>Food</h3>
+<img src="https://source.unsplash.com/400x300/?seychelles,beach">
+<h3>Seychelles</h3>
+<p>Crystal clear water beaches.</p>
 </div>
 
 <div class="card">
-<img src="images/forest.jpg">
-<h3>Forest</h3>
+<img src="https://source.unsplash.com/400x300/?miami,beach">
+<h3>Miami</h3>
+<p>Famous US beach city.</p>
 </div>
 
 <div class="card">
-<img src="images/waterfall.jpg">
-<h3>Waterfall</h3>
+<img src="https://source.unsplash.com/400x300/?rio,beach">
+<h3>Rio</h3>
+<p>Copacabana beach Brazil.</p>
 </div>
 
 <div class="card">
-<img src="images/desert.jpg">
-<h3>Desert</h3>
+<img src="https://source.unsplash.com/400x300/?andaman,beach">
+<h3>Andaman</h3>
+<p>Indian island beaches.</p>
 </div>
 
 <div class="card">
-<img src="images/island.jpg">
-<h3>Island</h3>
+<img src="https://source.unsplash.com/400x300/?lakshadweep,beach">
+<h3>Lakshadweep</h3>
+<p>Coral island beaches.</p>
 </div>
 
 <div class="card">
-<img src="images/lake.jpg">
-<h3>Lake</h3>
+<img src="https://source.unsplash.com/400x300/?bondi,beach">
+<h3>Bondi</h3>
+<p>Australia famous beach.</p>
 </div>
 
 <div class="card">
-<img src="images/river.jpg">
-<h3>River</h3>
+<img src="https://source.unsplash.com/400x300/?barcelona,beach">
+<h3>Barcelona</h3>
+<p>Mediterranean beach.</p>
 </div>
 
 <div class="card">
-<img src="images/village.jpg">
-<h3>Village</h3>
+<img src="https://source.unsplash.com/400x300/?ibiza,beach">
+<h3>Ibiza</h3>
+<p>Party beach island.</p>
 </div>
 
 <div class="card">
-<img src="images/snow.jpg">
-<h3>Snow</h3>
+<img src="https://source.unsplash.com/400x300/?santorini,beach">
+<h3>Santorini</h3>
+<p>Greek island beaches.</p>
 </div>
 
 <div class="card">
-<img src="images/wildlife.jpg">
-<h3>Wildlife</h3>
+<img src="https://source.unsplash.com/400x300/?krabi,beach">
+<h3>Krabi</h3>
+<p>Thailand limestone beaches.</p>
 </div>
 
 <div class="card">
-<img src="images/sunset.jpg">
-<h3>Sunset</h3>
+<img src="https://source.unsplash.com/400x300/?pattaya,beach">
+<h3>Pattaya</h3>
+<p>Thailand nightlife beach.</p>
 </div>
 
 <div class="card">
-<img src="images/trekking.jpg">
-<h3>Trekking</h3>
+<img src="https://source.unsplash.com/400x300/?boracay,beach">
+<h3>Boracay</h3>
+<p>Philippines white sand beach.</p>
 </div>
 
 <div class="card">
-<img src="images/camping.jpg">
-<h3>Camping</h3>
+<img src="https://source.unsplash.com/400x300/?dubai,beach">
+<h3>Dubai Beach</h3>
+<p>Luxury beach destination.</p>
 </div>
 
 <div class="card">
-<img src="images/cultural.jpg">
-<h3>Cultural</h3>
+<img src="https://source.unsplash.com/400x300/?cancun,beach">
+<h3>Cancun</h3>
+<p>Mexico famous beach.</p>
 </div>
 
 <div class="card">
-<img src="images/monument.jpg">
-<h3>Monuments</h3>
+<img src="https://source.unsplash.com/400x300/?bora,bora,beach">
+<h3>Bora Bora</h3>
+<p>Luxury tropical island.</p>
+</div>
+
 </div>
 
 </div>
